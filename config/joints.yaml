@@ -1,0 +1,30 @@
+# Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# Position Controllers ---------------------------------------
+
+# Base Joint
+joint1_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: base_joint
+  pid: {p: 2000.0, i: 100, d: 500.0}
+
+# Base Lower Joint
+joint2_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: base_lower_joint
+  pid: {p: 2000.0, i: 100, d: 500.0}
+
+# Lower Upper Joint
+joint3_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: lower_upper_joint
+  pid: {p: 2000.0, i: 100, d: 500.0}
+
+# Upper Pointer Joint
+joint4_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: upper_pointer_joint
+  pid: {p: 2000.0, i: 100, d: 500.0}
