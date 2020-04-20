@@ -20,7 +20,7 @@
     <inertial>
         <mass value = "0.00001" />
         <origin rpy ="0 0 0" xyz ="0 0 0" />
-        <inertia ixx = "0.01" ixy = "0.01" ixz = "0.01" iyy = "0.01" iyz = "0.01" izz = "0.01" />
+        <inertia ixx = "0.0" ixy = "0.0" ixz = "0.0" iyy = "0.0" iyz = "0.0" izz = "0.0" />
     </inertial>
 
   <joint name="fixed" type="fixed">
@@ -53,7 +53,7 @@
     <parent link="arm_base_bottom"/>
         <child link="arm_base"/>
         <origin xyz="0 0 0.005" rpy="0 0 0"/>
-        <limit lower="-3.14159" upper="3.14159" effort="0.1" velocity="0.005"/>
+        <limit lower="-3.14159" upper="3.14159" effort="5.4917" velocity="0.5"/>
     <axis xyz="0 0 1"/>
 </joint>
 
@@ -93,7 +93,7 @@
     <parent link="arm_base"/>
         <child link="arm_lower"/>
         <origin xyz="0 0 0.07" rpy="0 0 0"/>
-        <limit lower="-1.57" upper="1.57" effort="0.1" velocity="0.5"/>
+        <limit lower="-1.57" upper="1.57" effort="5.4917" velocity="0.5"/>
     <axis xyz="1 0 0"/>
 </joint>
 
@@ -139,7 +139,7 @@
     <parent link="arm_lower"/>
         <child link="arm_upper"/>
         <origin xyz="0 0 0.432" rpy="0 0 0"/>
-        <limit lower="-3.14159" upper="3.14159" effort="0.1" velocity="0.5"/>
+        <limit lower="-3.14159" upper="3.14159" effort="5.4917" velocity="0.5"/>
     <axis xyz="1 0 0"/>
 </joint>
 
@@ -186,7 +186,7 @@
     <parent link="arm_upper"/>
         <child link="pointer"/>
         <origin xyz="0 0 0.54" rpy="0 0 0"/>
-        <limit lower="-3.14159" upper="3.14159" effort="0.1" velocity="0.5"/>
+        <limit lower="-3.14159" upper="3.14159" effort="5.4917" velocity="0.5"/>
     <axis xyz="1 0 0"/>
 </joint>
 
