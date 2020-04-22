@@ -7,10 +7,19 @@
         <arg name="x" default="0"/>
         <arg name="y" default="0"/>
         <arg name="z" default="0.05"/>
+        <arg name="startJ1" default="0"/>
+        <arg name="startJ2" default="1.57"/>
+        <arg name="startJ3" default="-3.14"/>
+        <arg name="startJ4" default="0"/>
+  
         
         <!-- Spawn the robot model -->
         <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
-              args="-urdf -param robot_description -model arm -x $(arg x) -y $(arg y) -z $(arg z)" />
+              args="-urdf -param robot_description -model arm -x $(arg x) -y $(arg y) -z $(arg z) 
+              -J base_joint $(arg startJ1)
+              -J base_lower_joint $(arg startJ2)
+              -J lower_upper_joint $(arg startJ3)
+              -J upper_pointer_joint $(arg startJ4)" />
     
         <!-- Load Controllers-->
         <rosparam command="load" file="$(find arm_description)/config/joints.yaml"/>

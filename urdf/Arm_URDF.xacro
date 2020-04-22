@@ -34,7 +34,7 @@
     <inertial>
         <mass value = "0.00001" />
         <origin rpy ="0 0 0" xyz ="0 0 0" />
-        <inertia ixx = "0.01" ixy = "0.01" ixz = "0.01" iyy = "0.01" iyz = "0.01" izz = "0.01" />
+        <inertia ixx = "0.00" ixy = "0.00" ixz = "0.00" iyy = "0.00" iyz = "0.00" izz = "0.00" />
     </inertial>
 
     <visual>
@@ -138,7 +138,7 @@
 <joint name="lower_upper_joint" type="revolute">
     <parent link="arm_lower"/>
         <child link="arm_upper"/>
-        <origin xyz="0 0 0.432" rpy="0 0 0"/>
+        <origin xyz="0 0 0.432" rpy="0 0 -3.14"/>
         <limit lower="-3.14159" upper="3.14159" effort="5.4917" velocity="0.5"/>
     <axis xyz="1 0 0"/>
 </joint>
@@ -180,7 +180,7 @@
     </visual>
 </link>
 
-            <!-- Uper to Pointer Joint -->
+            <!-- Upper to Pointer Joint -->
 
 <joint name="upper_pointer_joint" type="revolute">
     <parent link="arm_upper"/>
