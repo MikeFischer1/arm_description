@@ -138,7 +138,7 @@
 <joint name="lower_upper_joint" type="revolute">
     <parent link="arm_lower"/>
         <child link="arm_upper"/>
-        <origin xyz="0 0 0.432" rpy="0 0 -3.14"/>
+        <origin xyz="0 0 0.432" rpy="0 0 0"/>
         <limit lower="-3.14159" upper="3.14159" effort="5.4917" velocity="0.5"/>
     <axis xyz="1 0 0"/>
 </joint>
