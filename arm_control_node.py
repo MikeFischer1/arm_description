@@ -60,6 +60,7 @@ class arm_controller():
 		# find angles based on IK coordinate frame
 		if self.old_arm_action != self.arm_action:
 			self.button_xyz = self.button_data
+			self.old_arm_action = self.arm_action
 
 		IK_angles = self.IK.joint_angles(self.arm_action, self.button_xyz, self.time_elapsed)
 
