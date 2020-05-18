@@ -2,7 +2,7 @@
 <launch>
 
     <include file ="/home/user/catkin_ws/src/dcam_description/launch/spawn.launch"/>
-    <node pkg="arm_description" type="arm_control_node.py" name="arm_conontrol_node" output="screen"/>
+    <node pkg="arm_description" type="arm_control_node.py" name="arm_control_node" output="screen"/>
 
     <group ns="/openArm">    
         <!-- Robot model -->
