@@ -7,14 +7,14 @@ arm_description uses Ros Kinetic and Gazebo
 
 There are two ways to spawn the virtual openArm. The first simply spawns the openArm and starts its joint controllers along with an rqt publisher which can be used to manipulate the arm in Gazebo. This is launched with the following command:
 
-roslaunch arm_description arm_spawn.launch
+        roslaunch arm_description arm_spawn.launch
 
 ![arm_spawn](images/arm_spawn.JPG)
 
 
 The second method of launching requires the package dcam_description, the openArm depth camera, to be cloned into the same src directory, as well as all its dependencies. This following command launches the openArm and the depth camera, as well as the arm_control_node:
 
-roslaunch arm_description all_spawn.launch
+        roslaunch arm_description all_spawn.launch
 
 ![all_spawn](images/all_spawn..JPG)
 
@@ -27,19 +27,19 @@ Please see the appendix at the bottom for a list of topics and nodes which are s
 When the all_spawn.launch command is entered, the arm_control_node starts. This node is looking for a string type command: either "press" or "rest" in the arm_action topic.
 A press is initiated with this command:
 
-rostopic pub /arm_action std_msgs/String press
+        rostopic pub /arm_action std_msgs/String press
 
 ![press](images/press.JPG)
 
 To return to resting position, use this command:
 
-rostopic pub /arm_action std_msgs/String rest
+        rostopic pub /arm_action std_msgs/String rest
 
 ![rest](images/rest.JPG)
 
 Make sure the button is within the field of view of the depth camera. A quick way to visually debug this is by using the following command:
 
-rosrun image_view image_view image:=/depth_camera_ir/depth_camera/color/image_raw
+        rosrun image_view image_view image:=/depth_camera_ir/depth_camera/color/image_raw
 
 This outputs a first-person color view from the depth camera.
 
