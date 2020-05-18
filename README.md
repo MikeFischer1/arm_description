@@ -1,5 +1,5 @@
 # :mechanical_arm: arm_description :mechanical_arm:
-arm_description uses Ros Kinetic and Gazebo
+arm_description uses Ros Kinetic and Gazebo.
 
   The arm_description package contains the URDF geometry, inverse kinematics and controller for the virutal openArm. The inertial properties match those of the real openArm, though friction at the joints has yet to be implemented. The base of the openArm is locked in space depending on parameters specified in the launch file used.
 
@@ -49,7 +49,7 @@ This outputs a first-person color view from the depth camera.
 
 It is not recommended that the geometry is modified in any way. This is because the code for openArm is not parameterized, so multiple measurements must be changed if the openArm geometry is changed. To change openArm geometry, simply access the Arm_URDF.xacro file in the URDF folder. 
 
-Each joint matches its location and "effort", or maximum giveable torque in Nm, to that on the openArm. The collision parameters are also set to match the shape of the geometry. To modify anything, I would recommend watching the construct's video series on the "My Robot Manipulator" project, linked here: https://www.youtube.com/playlist?list=PLK0b4e05LnzYpDnNeWJcQLju7JfJFX-lk.
+Each joint matches its location and "effort", or maximum giveable torque in Nm, to that on the openArm. The collision parameters are also set to match the shape of the geometry. To modify anything, I would recommend watching The Construct's video series on the "My Robot Manipulator" project, linked here: https://www.youtube.com/playlist?list=PLK0b4e05LnzYpDnNeWJcQLju7JfJFX-lk.
 
 ### Controllers
 
