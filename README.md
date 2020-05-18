@@ -1,4 +1,4 @@
-# arm_description 
+# :mechanical_arm: arm_description :mechanical_arm:
 arm_description uses Ros Kinetic and Gazebo
 
   The arm_description package contains the URDF geometry, inverse kinematics and controller for the virutal openArm. The inertial properties match those of the real openArm, though friction at the joints has yet to be implemented. The base of the openArm is locked in space depending on parameters specified in the launch file used.
@@ -9,7 +9,8 @@ There are two ways to spawn the virtual openArm. The first simply spawns the ope
 
 roslaunch arm_description arm_spawn.launch
 
-![rqt_publisher](images/rqt_publisher.jpeg)
+![](images/press.JPG)
+
 
 The second method of launching requires the package dcam_description, the openArm depth camera, to be cloned into the same src directory, as well as all its dependencies. This following command launches the openArm and the depth camera, as well as the arm_control_node:
 
@@ -86,4 +87,55 @@ The virtual openArm uses a PD controller (really a PID controller with zero ki) 
 
 ### all_spawn.launch Topics
 
+/arm_action
+/button_xyz
+/clock
+/depth_camera_ir/depth/camera_info
+/depth_camera_ir/depth_camera/color/camera_info
+/depth_camera_ir/depth_camera/color/image_raw
+/depth_camera_ir/depth_camera/color/image_raw/compressed
+/depth_camera_ir/depth_camera/color/image_raw/compressed/parameter_descriptions
+/depth_camera_ir/depth_camera/color/image_raw/compressed/parameter_updates
+/depth_camera_ir/depth_camera/color/image_raw/compressedDepth
+/depth_camera_ir/depth_camera/color/image_raw/compressedDepth/parameter_descriptions
+/depth_camera_ir/depth_camera/color/image_raw/compressedDepth/parameter_updates
+/depth_camera_ir/depth_camera/color/image_raw/theora
+/depth_camera_ir/depth_camera/color/image_raw/theora/parameter_descriptions
+/depth_camera_ir/depth_camera/color/image_raw/theora/parameter_updates
+/depth_camera_ir/depth_camera/depth/image_raw
+/depth_camera_ir/depth_camera/depth/points
+/depth_camera_ir/parameter_descriptions
+/depth_camera_ir/parameter_updates
+/gazebo/link_states
+/gazebo/model_states
+/gazebo/parameter_descriptions
+/gazebo/parameter_updates
+/gazebo/set_link_state
+/gazebo/set_model_state
+/openArm/joint1_position_controller/command
+/openArm/joint1_position_controller/pid/parameter_descriptions
+/openArm/joint1_position_controller/pid/parameter_updates
+/openArm/joint1_position_controller/state
+/openArm/joint2_position_controller/command
+/openArm/joint2_position_controller/pid/parameter_descriptions
+/openArm/joint2_position_controller/pid/parameter_updates
+/openArm/joint2_position_controller/state
+/openArm/joint3_position_controller/command
+/openArm/joint3_position_controller/pid/parameter_descriptions
+/openArm/joint3_position_controller/pid/parameter_updates
+/openArm/joint3_position_controller/state
+/openArm/joint4_position_controller/command
+/openArm/joint4_position_controller/pid/parameter_descriptions
+/openArm/joint4_position_controller/pid/parameter_updates
+/openArm/joint4_position_controller/state
+/openArm/joint_states
+/rosout
+/rosout_agg
+/yz_pix
+
 ### all_spawn.launch Nodes
+
+/arm_control_node
+/depth_finder
+/image_converter
+/openArm/controller_spawner
